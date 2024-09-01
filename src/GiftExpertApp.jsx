@@ -13,7 +13,7 @@ function GiftExpertApp() {
   const onAddCategory = (inputValue) => {
     if (categories.includes(inputValue)) return
 
-    setCategories([...categories, inputValue])
+    setCategories([inputValue])
   }
 
   return (

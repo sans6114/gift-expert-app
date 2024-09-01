@@ -33,8 +33,6 @@ export const GridGift = ({ category }) => {
                     )
                 }
             </div>
-
-
         </>
     )
 }
