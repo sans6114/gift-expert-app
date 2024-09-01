@@ -2,9 +2,9 @@ import './App.css';
 
 import { useState } from 'react';
 
-import Heading from '../src/components/Heading';
 import { AddCategory } from './components/AddCategory';
 import { GridGift } from './components/GridGift';
+import { Title } from './components/Heading';
 
 function GiftExpertApp() {
 
@@ -19,7 +19,7 @@ function GiftExpertApp() {
   return (
     <main>
       {/* titulo */}
-      <Heading title={'Gift Expert App'} subtitle={'An app to improve in REACT library skills'} />
+      <Title title={'Gift Expert App'} subtitle={'An app to improve in REACT library skills'} />
       {/* input */}
       <AddCategory onNewCategory={onAddCategory} />
 
