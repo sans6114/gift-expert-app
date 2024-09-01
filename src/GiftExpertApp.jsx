@@ -2,16 +2,18 @@ import './App.css';
 
 import { useState } from 'react';
 
-import { Button } from 'flowbite-react';
-
 import Heading from '../src/components/Heading';
+import { AddCategory } from './components/AddCategory';
+import { GridGift } from './components/GridGift';
 
 function GiftExpertApp() {
 
-  const [categories, setCategories] = useState(['One Punch', 'dragon Ball'])
+  const [categories, setCategories] = useState(['valorant'])
 
-  const onAddCategory = () => {
-    setCategories(['valorant',...categories])
+  const onAddCategory = (inputValue) => {
+    if (categories.includes(inputValue)) return
+
+    setCategories([...categories, inputValue])
   }
 
   return (
@@ -19,19 +21,18 @@ function GiftExpertApp() {
       {/* titulo */}
       <Heading title={'Gift Expert App'} subtitle={'An app to improve in REACT library skills'} />
       {/* input */}
+      <AddCategory onNewCategory={onAddCategory} />
 
 
       {/* listado de gift*/}
-      <ol>
 
-        {
-          categories.map((categoria) => {
-            return <li key={categoria}>{categoria}</li>
-          })
-        }
-      </ol>
+      {
+        categories.map((categoria) => (
+          <GridGift key={categoria} category={categoria} />
+        ))
+      }
       {/* gift Item*/}
-        <Button onClick={onAddCategory}>Click</Button>
+
 
 
 
