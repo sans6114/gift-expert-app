@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test on component <ItemGift /> Debe de hacer match con el snapshot 1`] = `
+<div>
+  <div
+    class="flex rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-gray-800 flex-col max-w-sm cursor-pointer"
+    data-testid="flowbite-card"
+  >
+    <img
+      alt="image or gift for image with title: Titulo de prueba"
+      class="rounded-t-lg"
+      data-testid="flowbite-card-image"
+      src="imagen de prueba"
+    />
+    <div
+      class="flex h-full flex-col justify-center gap-4 p-6"
+    >
+      <h5
+        class="hidden md:flex text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+      >
+        Titulo de prueba
+      </h5>
+    </div>
+  </div>
+</div>
+`;

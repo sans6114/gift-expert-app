@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const Title = ({ title, subtitle, btnText, btnUrl }) => {
     return (
         <>
@@ -35,3 +37,10 @@ export const Title = ({ title, subtitle, btnText, btnUrl }) => {
     )
 }
 
+
+Title.propTypes = {
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
+    btnText: PropTypes.string,
+    btnUrl: PropTypes.string,
+};

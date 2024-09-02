@@ -13,10 +13,11 @@ export const AddCategory = ({ onNewCategory }) => {
     }
     //onSubmit
     const onSubmit = (event) => {
+        console.log('submit')
         event.preventDefault()
         //le quito los espacios al valor del input
         const input = inputValue.trim()
-        if(input.length <= 1) return
+        if (input.length <= 1) return
         onNewCategory(input)
         setinputValue('')
     }
@@ -26,9 +27,10 @@ export const AddCategory = ({ onNewCategory }) => {
     return (
         <div className="mb-6">
             <form
+                aria-label='form'
                 className='flex gap-x-2'
                 onSubmit={onSubmit}
-                action="">
+            >
 
                 <input
                     onChange={onInputChange}
@@ -46,5 +48,5 @@ export const AddCategory = ({ onNewCategory }) => {
 
 
 AddCategory.propTypes = {
-    onNewCategory: PropTypes.func
+    onNewCategory: PropTypes.func.isRequired
 };

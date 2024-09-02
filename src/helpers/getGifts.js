@@ -9,6 +9,5 @@ export const getGifts = async (category) => {
         title: dataImg.title,
         url: dataImg.images.downsized_medium.url
     }))
-    console.log(gifts)
     return gifts
 }
